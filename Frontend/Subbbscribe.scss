@@ -1,0 +1,119 @@
+.subscription-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+
+    .popup-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .popup-containerz {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        max-width: 90%;
+        background: white;
+        overflow: hidden;
+        padding: 20px; /* Adds padding inside the popup */
+        z-index: 3001;
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack image and content vertically */
+            padding: 15px;
+        }
+    }
+
+    .subscription-image {
+        height: 100%;
+        width: 380px;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    .popup-contenttz {
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 1.5em;
+            }
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 0.9em;
+            }
+        }
+
+        input,
+        .subscribe-button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+
+            @media (max-width: 768px) {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+
+        .subscribe-button {
+            background-color: #07051a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e63600;
+            }
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: #333;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            font-size: 1.2em;
+        }
+
+        &:hover {
+            color: #e63600;
+        }
+    }
+}

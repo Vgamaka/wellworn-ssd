@@ -1,0 +1,12 @@
+/* Custom CSS for SweetAlert Close Button */
+.swal2-close {
+    color: black;      /* Adjust the color if needed */
+    border: none;      /* Remove any border */
+    font-size: 16px;   /* Adjust font size */
+    outline: none;     /* Remove focus outline */
+    opacity: 1;        /* Ensure the close button is visible */
+    &:hover{
+        background-color: white;
+    }
+  }
+  

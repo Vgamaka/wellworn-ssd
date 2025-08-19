@@ -1,0 +1,582 @@
+// Variables
+$primary-color: #000;
+$secondary-color: #f5f5f5;
+$highlight-color: #ff3c00;
+$text-color: #333;
+$gradient-color: linear-gradient( #c0c0c0, #2c2c2c); // Silver and light black for main1
+$quickdelivery-gradient: linear-gradient(90deg, #f8b878, #2c2c2c); // Light orange and light black for quickdelivery
+$font-family: "Arial", sans-serif;
+
+// Global Styles
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+
+
+// Header Navigation
+// Header Navigation
+.main1 {
+    font-size: 14px;
+    margin: 10px auto;
+    padding: 15px;
+    text-align: center;
+    background: #c0c0c0;
+    background-size: 100% 200%;
+    color: #fff;
+    font-weight: bold;
+  
+    a {
+      text-decoration: none;
+      color: $primary-color;
+  
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  
+    i {
+      margin: 0 5px;
+      font-size: 14px;
+      color: $text-color;
+  
+      &:hover {
+        color: $highlight-color; // Add hover effect for the icon
+      }
+  
+      @media (max-width: 768px) {
+        font-size: 12px; // Adjust size for smaller screens
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 100px;
+    }
+  }
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.payment-options {
+    display: flex;
+    flex-direction: column; // Stack the images vertically
+    align-items: flex-start; // Align the images to the left
+    margin-top: 10px;
+  
+    .payments-banner {
+      width: 75%; // Take the full width of the left section
+      height: auto;
+      object-fit: contain; // Maintain the aspect ratio
+      margin-bottom: 10px; // Add spacing below the first image
+    }
+  
+    .koko-logo {
+      width: 7.5%; // Adjust the size of the Koko logo
+      height: auto;
+      object-fit: contain; // Maintain the aspect ratio
+    }
+  }
+  
+  
+// Product Container
+.product-container {
+  display: flex;
+  align-items: stretch; // Ensures both sections stretch vertically
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  height: 100%; // Ensure the container height matches the tallest content
+}
+
+// Left Section
+.left-section {
+  flex: 1; // Takes equal space by default
+  padding: 10px;
+
+  .main-image {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .small-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+
+      &:hover {
+        border-color: $highlight-color;
+      }
+    }
+  }
+}
+
+// Right Section
+.right-section {
+  flex: 2; // Takes more horizontal space
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Evenly distributes content
+  height: 100%; // Matches left-section height
+
+  .product_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product_price {
+    display: flex;
+    flex-direction: column; /* Stack the prices vertically */
+    gap: 5px; /* Add space between prices */
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+    .discounted-price {
+      font-size: 20px; /* Larger font size for prominence */
+      font-weight: bold; /* Emphasize the discounted price */
+      color: #000000; /* Highlighted color for the discounted price */
+    }
+  
+    .original-price {
+      font-size: 16px; /* Slightly smaller than discounted price */
+      font-weight: normal; /* Normal weight for the original price */
+      color: #777; /* Gray color to de-emphasize */
+      text-decoration: line-through; /* Strikethrough for the original price */
+    }
+  }
+  
+
+  .ratings1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    .stars1 {
+      i {
+        color: gold;
+      }
+    }
+
+    span {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+  .quickdelivery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: calc(150px * 2 + 10px); /* Match width of buttons + gap */
+    background-color: $highlight-color;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse-animation 3s infinite;
+
+    i {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    label {
+      margin: 0;
+    }
+  }
+  .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .sizebutton {
+    margin-bottom: 15px;
+
+    .psize {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .clearbutton {
+      margin: 5px;
+      padding: 10px 15px;
+      width: 100px; // Fixed width
+      max-width: auto; // Expand for long text
+      text-align: center;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      background-color: #ff44007b;
+      color: $primary-color;
+      cursor: pointer;
+
+      &:hover,
+      &.selected {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+    button
+     {
+      margin: 5px;
+      padding: 10px 15px;
+      width: 100px; // Fixed width
+      max-width: auto; // Expand for long text
+      text-align: center;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      background-color: #fff;
+      color: $primary-color;
+      cursor: pointer;
+
+      &:hover,
+      &.selected {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  .color-section {
+    margin-bottom: 15px;
+
+    p {
+      font-weight: bold;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      width: 100px; // Fixed width
+      max-width: auto; // Expand for long text
+      text-align: center;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      background-color: #fff;
+      color: $primary-color;
+      cursor: pointer;
+
+      &:hover,
+      &.selected {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .quantity-label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      background-color: #fff;
+      color: $primary-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  .size-chart-button {
+    position: fixed;
+    bottom: 20%;
+    right: 20px;
+    padding: 10px;
+    width: 100px; // Minimum width
+    height: 100px; // Minimum height
+    background-color: $highlight-color;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; // Stack the icon and text vertically
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  
+    &:hover {
+      background-color: darken($highlight-color, 10%);
+      transform: scale(1.1); // Adds a hover effect
+    }
+  
+    &.visible {
+      width: 400px; // Increased size when expanded
+      height: 400px; // Increased size when expanded
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #fff;
+      color: $primary-color;
+      right: 20px;
+      bottom: 20%;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+  
+      .size-chart-content {
+        display: block;
+        opacity: 1;
+        animation: slide-in 0.4s ease-in-out;
+  
+        h4 {
+          margin-bottom: 15px;
+          text-align: center;
+          font-size: 18px;
+        }
+  
+        img {
+          width: 100%; // Fills the container
+          height: auto;
+          max-height: 90%; // Prevents overflow
+          aspect-ratio: 1 / 1; // Makes the image a square
+          object-fit: cover; // Ensures the image fits properly
+        }
+      }
+    }
+  
+    .button-content {
+      display: flex;
+      flex-direction: column; // Stack icon and text vertically
+      align-items: center;
+      gap: 5px; // Space between icon and text
+  
+      i {
+        font-size: 24px; // Increase icon size
+      }
+  
+      span {
+        font-size: 14px; // Text size
+        font-weight: bold;
+      }
+    }
+  
+    .size-chart-content {
+      display: none;
+      opacity: 0;
+      padding: 10px;
+      font-size: 14px;
+      color: $text-color;
+      animation: slide-in 0.3s ease-in-out forwards;
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .abs {
+    display: flex;
+    flex-direction: column; /* Items arranged vertically within the container */
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  
+    .button-group {
+      display: flex;
+      flex-direction: row; /* Ensure buttons are always in a row */
+      gap: 10px; /* Space between buttons */
+      flex-wrap: nowrap; /* Prevent buttons from stacking */
+      justify-content: flex-start; /* Align buttons to the left */
+    }
+  
+    .addcart button,
+    .buyNow button {
+      padding: 15px 20px;
+      width: 150px; /* Fixed button width */
+      border: none;
+      border-radius: 50px;
+      background-color: $primary-color;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      white-space: nowrap; /* Prevent button text wrapping */
+  
+      &:hover {
+        background-color: $highlight-color;
+      }
+    }
+  
+    // .quickdelivery {
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 10px;
+    //   width: calc(150px * 2 + 10px); /* Match width of buttons + gap */
+    //   background-color: $highlight-color;
+    //   color: #fff;
+    //   font-weight: bold;
+    //   font-size: 16px;
+    //   padding: 10px;
+    //   border-radius: 10px;
+    //   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    //   animation: pulse-animation 3s infinite;
+  
+    //   i {
+    //     font-size: 20px;
+    //     color: #fff;
+    //   }
+  
+    //   label {
+    //     margin: 0;
+    //   }
+    // }
+  }
+  
+  @media (max-width: 768px) {
+    .abs {
+      .button-group {
+        flex-direction: row; /* Ensure buttons remain in a row on smaller screens */
+      }
+    }
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  
+  @media screen and (max-width: 380px) {
+    .abs {
+      flex-direction: column; // Stack buttons vertically for small screens
+      gap: 10px;
+  
+      .addcart button,
+      .buyNow button {
+        width: 100%; // Make buttons responsive to fit within the container
+        font-size: 14px; // Decrease font size for smaller screens
+        padding: 15px; // Adjust padding for smaller screens
+      }
+      
+      .quickdelivery {
+        width: 100%;
+    }
+  }
+}
+  @media screen and (max-width: 575px) {
+    .size-chart-button {
+      width: 70px; // Decrease size for smaller screens
+      height: 70px; // Decrease size for smaller screens
+      bottom: 15%; // Adjust position for smaller screens
+      right: 10px; // Remove extra space from the right
+      font-size: 12px; // Reduce font size for button content
+      display: flex; // Use flexbox for centering
+      flex-direction: column; // Stack icon and text vertically
+      justify-content: center; // Center content vertically
+      align-items: center; // Center content horizontally
+      text-align: center; // Align text in the center
+      gap: 5px; // Add spacing between icon and text
+  
+      .button-content {
+        i {
+          font-size: 16px; // Reduce icon size
+        }
+  
+        span {
+          font-size: 10px; // Reduce text size
+        }
+      }
+
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .size-chart-button {
+      &.visible {
+        width: 90%; // Adjust width to take up most of the screen width
+        height: auto; // Allow the height to adjust dynamically based on content
+        right: 5%; // Center the chart within the screen by reducing right margin
+        bottom: 10%; // Adjust the bottom position for better spacing
+        padding: 15px; // Add some padding for aesthetics
+        border-radius: 15px; // Slightly round the corners for a modern look
+  
+        .size-chart-content {
+          h4 {
+            font-size: 14px; // Adjust heading size for smaller screens
+          }
+  
+          img {
+            width: 100%; // Ensure the image scales with the width
+            height: auto; // Maintain aspect ratio
+            object-fit: contain; // Prevent image distortion
+          }
+        }
+      }
+  
+      .button-content {
+        i {
+          font-size: 14px; // Decrease icon size for smaller screens
+        }
+  
+        span {
+          font-size: 12px; // Adjust text size for smaller screens
+        }
+      }
+    }
+  }
+  
+  
+}
+
+

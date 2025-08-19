@@ -1,0 +1,118 @@
+// Variables
+$background-color: #ffffff;
+$border-color: #ccc;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$text-color: #07223D;
+$font-size-small: 16px;
+$font-size-medium: 20px;
+$font-size-large: 16px;
+$padding-small: 8px;
+$padding-medium: 16px;
+$margin-small: 10px;
+$margin-medium: 15px;
+$gap: 20px;
+$border-radius: 8px;
+$popup-width: 300px;
+
+// Main Notification Container
+.mainNotification {
+  margin: 20px auto; // Adds 20px spacing from top and bottom and centers horizontally
+  height: 50px;
+  background-color: $background-color;
+  width: calc(100% - 40px); // Full width minus 40px for left and right spaces
+  padding: 10px 20px; // Adds 10px spacing from top/bottom and 20px from left/right
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box; // Include padding in element width
+  box-shadow: $box-shadow;
+
+  // Notification Title
+  .minnotofititle {
+    font-size: $font-size-small;
+    font-weight: bold;
+    margin-left: $margin-medium;
+    color: $text-color;
+  }
+
+  // Notification List
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: $gap;
+    align-items: center;
+
+    li {
+      margin-left: $margin-small;
+
+      i {
+        font-size: $font-size-medium;
+        color: $text-color;
+        cursor: pointer;
+
+        &:hover {
+          color: darken($text-color, 10%);
+        }
+      }
+    }
+  }
+
+  // Notification Popup
+  .notification-popup {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    box-shadow: $box-shadow;
+    padding: $padding-medium;
+    z-index: 100;
+    width: $popup-width;
+    border-radius: $border-radius;
+
+    p {
+      font-size: $font-size-medium;
+      font-weight: bold;
+      margin-bottom: $padding-small;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: $padding-small;
+
+        p {
+          margin: 0;
+          font-size: $font-size-small;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  // Notification Icon List
+  .notifi ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-right: $margin-small;
+      cursor: pointer;
+
+      i {
+        font-size: $font-size-medium;
+        color: $text-color;
+
+        &:hover {
+          color: $border-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.shipping-method-manager {
+    margin: 20px ;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    .form-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            flex: 1 1 calc(33% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+            &:focus {
+                border-color: #07223D;
+                outline: none;
+            }
+        }
+
+        button {
+            flex: 1 1 100%;
+            padding: 10px 15px;
+            border: none;
+            background-color: #07223D;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #ff3c00;
+            }
+        }
+    }
+
+    .table-container {
+        overflow-x: auto;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+
+            th, td {
+                padding: 12px;
+                border: 1px solid #ddd;
+                text-align: center;
+            }
+
+            th {
+                background-color: #f4f4f4;
+            }
+
+            td {
+                &:first-child {
+                    text-align: left;
+                }
+            }
+
+            .edit-btn,
+            .delete-btn {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                background-color: #07223D;
+                width: 70px;  // Fixed width for uniformity
+                margin: 0 5px;  // Margin between buttons
+
+                &:hover {
+                    background-color: red;
+                }
+            }
+
+            .edit-btn {
+                background-color: #07223D;
+                color: #fff;
+
+                &:hover {
+                    background-color: #ff3c00;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .shipping-method-manager {
+        width: 95%;
+        padding: 15px;
+
+        .form-container {
+            flex-direction: column;
+            gap: 10px;
+
+            input[type="text"],
+            input[type="number"],
+            select,
+            button {
+                flex: 1 1 100%;
+            }
+        }
+
+        .table-container {
+            table {
+                th, td {
+                    padding: 8px;
+                }
+
+                .edit-btn,
+                .delete-btn {
+                    padding: 6px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .shipping-method-manager {
+        .form-container {
+            input[type="text"],
+            input[type="number"],
+            select,
+            button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        .table-container {
+            table {
+                th, td {
+                    padding: 6px;
+                    font-size: 14px;
+                }
+
+                .edit-btn,
+                .delete-btn {
+                    padding: 5px 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

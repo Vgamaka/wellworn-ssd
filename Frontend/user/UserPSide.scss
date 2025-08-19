@@ -1,0 +1,72 @@
+.side-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  z-index: 0;
+  overflow-y: auto;
+  transform: translateX(-100%); /* Initially hidden for smaller screens */
+  transition: transform 0.3s ease;
+
+  &.open {
+    z-index: 1000;
+    transform: translateX(0); /* Slide into view */
+  }
+
+  ul {
+    margin-top: 70px;
+    list-style: none;
+    padding: 20px 5px;
+  }
+
+  li {
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    &.active {
+      
+      color: #000;
+      background-color: #fff;
+      border-radius: 20px 0px 0px 20px;
+    }
+  }
+
+  @media (min-width: 820.99px) {
+    transform: translateX(0); /* Always visible for larger screens */
+  }
+}
+
+.promain-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px; /* Reserve space for side panel */
+  transition: margin-left 0.3s ease;
+  @media (max-width: 820.99px) {
+    margin-left: 0; /* Reset for smaller screens */
+  }
+
+  &.content-shifted {
+    margin-left: 250px; /* Adjust dynamically when side panel is open */
+  }
+}
+
+.menu-togglee {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  background-color: #cc5500;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 5px;
+  display: block; /* Visible by default */
+
+  @media (min-width: 820.99px) {
+    display: none; /* Hidden for larger screens */
+  }
+}

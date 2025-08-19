@@ -1,0 +1,58 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); // Semi-transparent overlay
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; // Ensure it stays on top
+  }
+  
+  .modal-content {
+	position: relative;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 0; // Remove excess padding
+	max-width: 100%; // Limit modal width
+	max-height: 100%; // Limit modal height
+	overflow: hidden; // Prevent overflow from image or other content
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  
+	@media (max-width: 768px) {
+	  max-width: 90%;
+	  max-height: 90%;
+	}
+  }
+  
+  .modal-close-button {
+	position: absolute;
+	margin-top: -3%; // Position 10px from the top of the modal
+	margin-right: -97%; // Position 10px from the right of the modal
+	background: none;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	cursor: pointer;
+	z-index: 1010; // Ensure it stays above the image
+	padding: 5px;
+  
+	&:hover {
+	  background-color: rgba(250, 250, 250, 0); // Subtle hover effect
+
+	}
+  }
+  
+  
+  .size-chart-image {
+	width: 100%; // Fill the modal content width
+	height: auto; // Maintain aspect ratio
+	object-fit: contain; // Ensure proper scaling
+	display: block; // Remove any inline spacing
+  }
+  

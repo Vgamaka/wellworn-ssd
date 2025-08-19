@@ -1,0 +1,120 @@
+.overview-container {
+    padding: 20px;
+}
+
+.overview-charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; /* Adjust layout for smaller screens */
+    }
+}
+
+.chart-orders,
+.chart-sales {
+    width: 100%; /* Ensure the chart container adapts to the parent width */
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content from spilling outside the container */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+
+    .scrollable-content {
+        max-height: 400px; /* Set a fixed height for the scrollable area */
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        white-space: nowrap; /* Prevent content from wrapping */
+
+        /* Add a scrollbar for better user experience */
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar thumb */
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Darker color on hover */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Background of the scrollbar track */
+        }
+    }
+
+    .all-revenue-button {
+        padding: 10px 20px; /* Larger padding for emphasis */
+        background-color: #FF5733; /* Unique color for the button */
+        color: #fff; /* White text for contrast */
+        border: none; /* Remove border */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 16px; /* Slightly larger text */
+        font-weight: bold; /* Emphasize the button text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    
+    }
+    
+}
+
+.chart-orders p,
+.chart-sales p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Text color */
+}
+
+.report-buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #555; /* Label text color */
+    }
+
+    select {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 100%;
+        background-color: #fff;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #07223D; /* Highlight border on focus */
+        }
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #07223D;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #FF3C00;
+        }
+
+        &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+}

@@ -1,0 +1,251 @@
+/* Profile.scss */
+
+/* General styles for the profile page */
+.userpropath {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  text-align: center;
+  color: #000000;
+}
+
+.usermainss {
+  padding: 20px;
+  margin: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upfirstt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.uplblsecc {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+
+}
+
+.uplbls {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.upintextsecc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upfinp {
+  padding: 5px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #ff5602;
+  }
+}
+
+.imgnbtnseccup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-right: 20%;
+}
+
+.upimgsecc {
+  display: flex;
+  justify-content: center;
+}
+
+.uuprofile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0px solid #07223D;
+}
+
+.editupbtn {
+  background-color: #07223D;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 130px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff5602;
+  }
+}
+
+.logoutbtnup {
+  background-color: #07223D;
+  color: white;
+  padding: 12px 18px;
+  margin-left: 150px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 45%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff5602;
+  }
+}
+
+.logoutbtnup1{
+  background-color: #07223D;
+  color: white;
+  padding: 12px 18px;
+  margin-left: 150px;
+  margin-top: 40px;
+  border: none;
+  width: 45%;
+  max-width: 300px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+.hhui2 {
+  text-decoration: none;
+}
+
+.upseccond {
+  margin-top: 20px;
+}
+
+.logout {
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+
+/* For devices with max-width of 430px */
+@media (max-width: 430px) {
+  .userpropath {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .usermains {
+    padding: 20px;
+  }
+
+  .upfirstt {
+    flex-direction: column;
+  }
+
+  .upintextsecc input {
+    width: 100%;
+  }
+
+  .editupbtn,
+  .logoutbtnup {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .uuprofile-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* For devices between 481px and 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .usermains {
+    padding: 30px;
+  }
+
+  .upfirstt {
+    flex-direction: column;
+  }
+
+  .upimgsecc {
+    justify-content: center;
+  }
+
+  .uuprofile-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .editupbtn,
+  .logoutbtnup {
+    padding: 10px;
+  }
+}
+
+/* For devices between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .usermains {
+    padding: 40px;
+  }
+
+  .upfirstt {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .upimgsecc {
+    align-items: flex-start;
+  }
+
+  .editupbtn,
+  .logoutbtnup {
+    padding: 12px 20px;
+  }
+
+  .uuprofile-image {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* For devices above 1025px */
+@media (min-width: 1025px) {
+  .usermains {
+    padding: 50px;
+  }
+
+  .upfirstt {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .editupbtn,
+  .logoutbtnup {
+    padding: 12px 20px;
+  }
+
+  .uuprofile-image {
+    width: 150px;
+    height: 150px;
+  }
+}

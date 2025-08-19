@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.privacymain {
+  position: relative;
+  padding-top: 150px; /* Added padding for spacing */
+  padding-left: 5%; /* Relative padding for responsiveness */
+  padding-right: 5%;
+}
+
+.privacytopic {
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 30px; /* Space below the title */
+}
+
+.privacysubone,
+.privacysub {
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 40px; /* Space above subheading */
+}
+
+.privacy_special {
+  display: flex;
+  flex-direction: column;
+}
+
+.privacylistone {
+  font-size: 20px;
+  padding-top: 15px; /* Consistent spacing */
+}
+
+.privacylisttwo,
+.privacylistthree {
+  padding-left: 20px; /* Indentation using padding */
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+.privacyparagraph {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify; /* Better readability for long text */
+  padding: 20px; /* Responsive padding */
+}
+
+.privacypara {
+  padding: 20px 0; /* Vertical spacing between sections */
+}
+
+.privacyparalast {
+  text-align: center;
+  padding: 20px 10%; /* Centralized content with padding */
+}
+
+.privacyheaderlastfirst {
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .privacymain {
+    padding-top: 100px;
+  }
+
+  .privacytopic {
+    font-size: 40px;
+  }
+
+  .privacysubone,
+  .privacysub {
+    font-size: 22px;
+    padding-top: 30px;
+  }
+
+  .privacylisttwo,
+  .privacylistthree {
+    padding-left: 15px;
+    font-size: 16px;
+  }
+
+  .privacyparagraph {
+    font-size: 14px;
+    padding: 15px 3%;
+  }
+
+  .privacypara {
+    padding: 15px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .privacymain {
+    padding: 10%;
+    padding-top: 80px;
+  }
+
+  .privacytopic {
+    font-size: 35px;
+  }
+
+  .privacysubone,
+  .privacysub {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+
+
+  .privacylisttwo,
+  .privacylistthree {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .privacyparagraph {
+    font-size: 12px;
+    padding: 10px 2%;
+  }
+
+  .privacypara {
+    padding: 10px 0;
+  }
+
+  .privacyparalast {
+    padding: 10px;
+  }
+}

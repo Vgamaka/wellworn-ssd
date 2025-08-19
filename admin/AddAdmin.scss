@@ -1,0 +1,152 @@
+/* General Page Layout */
+.regmtitle11 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000000;
+    margin-top: 60px;
+  }
+  
+  .uregmallitems11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    width: 500px;
+    
+  }
+  
+  .form11{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .regfitems11 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Input fields */
+  .regfminputs11 {
+    width: 100%;
+    padding: 6px;
+    background-color: #f5f4f4;
+    border: 1px solid #887777;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  
+    &:focus {
+      border-color: #fb5909;
+    }
+  }
+  
+  /* Button */
+  .remubtn11 {
+    background-color: #07223D;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+
+    &:hover {
+      background-color: #fb5909;
+    }
+  }
+  
+  /* Error Message */
+  div[style*="color: red"] {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For small devices (max-width: 430px) */
+  @media (max-width: 430px) {
+    .regmtitle11 {
+      font-size: 24px;
+    }
+  
+    .uregmallitems11 {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .regfitems11 {
+      gap: 10px;
+    }
+  
+    .remubtn11 {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }
+  
+  /* For tablets and small devices (min-width: 481px and max-width: 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .uregmallitems11 {
+      padding: 30px;
+    }
+  
+    .regfitems11 {
+      gap: 20px;
+    }
+  
+    .remubtn11 {
+      font-size: 16px;
+    }
+  }
+  
+  /* For larger tablets and smaller laptops (min-width: 769px and max-width: 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .uregmallitems11 {
+      padding: 40px;
+    }
+  
+    .regfitems11 {
+      gap: 2px;
+    }
+  
+    .remubtn11 {
+      font-size: 18px;
+      padding: 14px 25px;
+    }
+  }
+  
+  /* For larger screens (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    .uregmallitems11 {
+      padding: 50px;
+    }
+  
+    .regfitems11 {
+      gap: 10px;
+    }
+  
+    .remubtn11 {
+      font-size: 18px;
+      padding: 8px 10px;
+    }
+  }
+  
