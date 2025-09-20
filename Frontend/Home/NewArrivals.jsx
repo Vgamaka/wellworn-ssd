@@ -34,7 +34,7 @@ const NewArrivals = () => {
     const fetchProducts = async () => {
   
       try {
-        const productsResponse = await axios.get(`https://wellworn-4.onrender.com/api/products`);
+        const productsResponse = await axios.get(`${apiUrl}/api/products`);
         const productsData = productsResponse.data.response;
         const filteredProducts = productsData.filter(product =>
           ((userLocation === "Sri Lanka" && product.Areas.includes("Sri Lanka")) ||
