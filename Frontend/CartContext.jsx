@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
 
         setLoading(true);
         try {
-            const response = await axios.get(`https://wellworn-4.onrender.com/api/cart/${user.UserId}`);
+            const response = await axios.get(`${apiUrl}/api/cart/${user.UserId}`);
             const items = response.data || []; // Default to an empty array if no data
             setCartItems(items); // Update the state with the fetched items
         } catch (error) {
